@@ -11,6 +11,7 @@ export const maxDuration = 30;
 
 export async function POST(request: NextRequest) {
   try {
+    console.log("Received revalidation request");
     const requestBody = await request.json();
     const secret = request.headers.get("x-webhook-secret");
 
